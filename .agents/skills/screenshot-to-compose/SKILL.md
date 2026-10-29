@@ -43,6 +43,7 @@ Implement the requested screen as closely as possible to the supplied screenshot
 - Check `git diff` before finishing.
 - Run the narrowest relevant Gradle build or tests available.
 - If a build fails, distinguish new failures from pre-existing failures when possible.
+- If the build or test environment cannot be run (e.g. sandbox restrictions, missing local Android SDK, or environment limitations), explicitly report `Build/Test: NOT RUN` with the exact reason. Do not assume or claim tests passed without execution.
 - If screenshot rendering is available, compare the implementation with the reference.
 - Do not make unrelated edits to fix unrelated test failures.
 
@@ -50,5 +51,6 @@ Implement the requested screen as closely as possible to the supplied screenshot
 Summarize:
 1. Files changed and why.
 2. How the implementation matches the reference.
-3. Build and test results.
+3. Build and test results (or explicit `NOT RUN` with reason).
 4. Any remaining visual differences or limitations.
+5. Cross-platform note: Remind whether corresponding feature/contract changes are needed for parity on iOS or HarmonyOS to satisfy full acceptance criteria.
