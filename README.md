@@ -1,6 +1,24 @@
-# screenshot-to-compose Skill
+# screenshot-to-compose Skill 🎨📱
 
-A specialized AI Agent Skill designed for **Native Kotlin + Jetpack Compose** projects (such as Grabtamp Customer). It guides AI coding assistants (like Codex, Claude, Antigravity) to implement or adjust Android screens directly from screenshots or Figma designs without breaking existing architecture or modifying unrelated code.
+A specialized AI Agent Skill designed for **Native Kotlin + Jetpack Compose** projects (such as Grabtamp Customer). It guides AI coding assistants (Codex, Claude, Antigravity) to implement or adjust Android screens directly from screenshots or Figma designs without breaking existing architecture or modifying unrelated code.
+
+---
+
+## ⚡ วิธีติดตั้งง่ายๆ บรรทัดเดียว (One-Line Quick Install)
+
+เปิด Terminal แล้วคัดลอกคำสั่งนี้ไปวางเพื่อติดตั้งได้ทันที:
+
+### 1. ติดตั้งแบบ Global (ใช้ได้กับทุกโปรเจกต์อัตโนมัติ - แนะนำ ⭐️)
+```bash
+curl -fsSL https://raw.githubusercontent.com/tavanhvannala677-beep/skills-screenshot-to-compose-tawan/main/install.sh | bash
+```
+> ติดตั้งไปยัง `~/.agents/skills/screenshot-to-compose/` ทำให้เปิดโปรเจกต์ Android ไหนใน Codex ก็เรียกใช้ได้ทันทีโดยไม่ต้องติดตั้งซ้ำ
+
+### 2. ติดตั้งเฉพาะโปรเจกต์ปัจจุบัน (Local Project)
+ให้ `cd` ไปยังโฟลเดอร์โปรเจกต์ Android ของคุณ แล้วรัน:
+```bash
+curl -fsSL https://raw.githubusercontent.com/tavanhvannala677-beep/skills-screenshot-to-compose-tawan/main/install.sh | bash -s -- --local
+```
 
 ---
 
@@ -13,24 +31,6 @@ A specialized AI Agent Skill designed for **Native Kotlin + Jetpack Compose** pr
 5. 📋 **สรุปผลลัพธ์ชัดเจน** — สรุปไฟล์ที่ถูกแก้ไข ผลการรัน Build/Test และจุดที่ยังมีความต่างจากภาพอ้างอิง (ถ้ามี)
 
 > ⚠️ **ข้อจำกัดสำคัญ:** Skill นี้เป็นชุดคำสั่งควบคุมพฤติกรรมของ AI (Prompt & Workflow Rules) ไม่ได้สร้าง UI อัตโนมัติด้วยตัวเอง ต้องใช้ร่วมกับ AI Assistant (เช่น Codex) โดยต้องแนบภาพอ้างอิงและระบุหน้าจอเป้าหมายให้ชัดเจน
-
----
-
-## 📁 โครงสร้างและการติดตั้ง (Installation)
-
-### 1. ติดตั้งในโปรเจกต์ Android ของคุณ
-วางไว้ที่โฟลเดอร์ของโปรเจกต์:
-```
-<Project_Root>/android/.agents/skills/screenshot-to-compose/SKILL.md
-```
-
-### 2. โครงสร้างใน Skill Repository นี้
-```
-.
-├── SKILL.md                                        # Root skill definition
-├── .agents/skills/screenshot-to-compose/SKILL.md   # Codex local skill format
-└── README.md                                       # คู่มือการใช้งานและเอกสารกำกับ
-```
 
 ---
 
